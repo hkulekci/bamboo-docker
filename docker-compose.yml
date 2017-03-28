@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  bamboo:
+    build: ./.docker/bamboo
+    ports:
+        - "8085:8085"
+    volumes:
+        - ./data:/data
