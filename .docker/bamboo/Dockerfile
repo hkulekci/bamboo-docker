@@ -6,7 +6,7 @@ ENV BAMBOO_VERSION "5.15.4"
 RUN apt-get update && apt-get install wget software-properties-common -y
 RUN add-apt-repository "deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main"
 RUN echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | debconf-set-selections
-RUN apt-get update && apt-get install oracle-java8-installer -y
+RUN apt-get update && apt-get install oracle-java8-installer -y --allow-unauthenticated
 
 RUN mkdir -p /opt/atlassian
 WORKDIR /opt/atlassian
