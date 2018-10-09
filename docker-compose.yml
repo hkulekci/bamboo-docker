@@ -7,3 +7,4 @@ services:
         - "8085:8085"
     volumes:
         - ./data:/data
+        - ./ssh-keys:~/.ssh
